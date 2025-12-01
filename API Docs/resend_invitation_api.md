@@ -24,6 +24,7 @@ This API is used to resend the signing invitation when the initial invitation wa
     "docket_id": "xxxx",
     "stakeholder_id": "xxxx",
     "reference_id": "xxxx"
+    "attempt_count": "xxxx"
 }
 ```
 
