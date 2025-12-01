@@ -2,8 +2,7 @@
 
 ## Feature
 
-This API is used to resend the signing invitation in cases where the
-initial invitation was not sent.
+This API is used to resend the signing invitation when the initial invitation was not sent.
 
 ## HTTP Method
 
@@ -11,10 +10,11 @@ initial invitation was not sent.
 
 ## Headers
 
-  Header Name                Description
-  -------------------------- ------------------------
-  `x-parse-rest-api-key`     Required API key
-  `x-parse-application-id`   Application identifier
+| Header Name              | Description            |
+| ------------------------ | ---------------------- |
+| `x-parse-rest-api-key`   | Required API key       |
+| `x-parse-application-id` | Application identifier |
+
 
 ## Request Body
 
@@ -29,7 +29,7 @@ initial invitation was not sent.
 
 ## Response
 
-### With Invitation Link
+#### With Invitation Link
 
 ``` json
 {
@@ -41,7 +41,7 @@ initial invitation was not sent.
 }
 ```
 
-### Without Invitation Link
+#### Without Invitation Link
 
 ``` json
 {
@@ -58,49 +58,22 @@ JSON in Base64 encoded format.
 
 ## Request Parameters
 
-  ------------------------------------------------------------------------
-  Parameter Name             Field Option            Description
-  -------------------------- ----------------------- ---------------------
-  `stakeholder_id`           Mandatory               Unique ID assigned to
-                                                     every stakeholder.
+| Parameter Name   | Field Option | Description                                                                         |
+| ---------------- | ------------ | ----------------------------------------------------------------------------------- |
+| `stakeholder_id` | Mandatory    | Unique ID assigned to every stakeholder.                                            |
+| `reference_id`   | Mandatory    | Unique ID assigned to every eSign requester for each API call.                      |
+| `docket_id`      | Mandatory    | Unique ID for the set of uploaded document(s). One `docket_id` is assigned per set. |
+| `document_id`    | Mandatory    | Unique ID assigned to each uploaded document.                                       |
 
-  `reference_id`             Mandatory               Unique ID assigned to
-                                                     every eSign requester
-                                                     for each API call.
-
-  `docket_id`                Mandatory               Unique ID for the set
-                                                     of uploaded
-                                                     document(s). One
-                                                     `docket_id` is
-                                                     assigned per set.
-
-  `document_id`              Mandatory               Unique ID assigned to
-                                                     each uploaded
-                                                     document.
-  ------------------------------------------------------------------------
 
 ## Response Parameters
 
-  -----------------------------------------------------------------------
-  Parameter Name                          Description
-  --------------------------------------- -------------------------------
-  `status`                                Indicates success or failure of
-                                          the API.
+| Parameter Name         | Description                                                                 |
+| ---------------------- | --------------------------------------------------------------------------- |
+| `status`               | Indicates success or failure of the API.                                    |
+| `message`              | Status message of the invitation.                                           |
+| `reference_id`         | Unique ID assigned to every eSign requester for each API call.              |
+| `resendInvitationLink` | Invitation link sent to signers who did not receive the initial invitation. |
+| `error`                | Error message associated with the failure.                                  |
+| `error_code`           | Code corresponding to the error.                                            |
 
-  `message`                               Status message of the
-                                          invitation.
-
-  `reference_id`                          Unique ID assigned to every
-                                          eSign requester for each API
-                                          call.
-
-  `resendInvitationLink`                  Invitation link sent to signers
-                                          who didn't receive the initial
-                                          invitation.
-
-  `error`                                 Error message associated with
-                                          the failure.
-
-  `error_code`                            Code corresponding to the
-                                          error.
-  -----------------------------------------------------------------------
