@@ -1,4 +1,74 @@
 # Feature Documentation
+
+## SH Validations & Consideration Amount Checks
+### 1. Overview
+This feature validates first-party details, reference IDs, and consideration vs. stamp duty amounts before proceeding with further stamp duty processing. It ensures data integrity, prevents invalid requests, and enforces business/legal rules.
+
+---
+
+### 2. First Party Validations
+- Internal validation only (no Shield API call at this stage).
+- If the first party name is not registered, throw an error: “**First party name used in the request is not registered.**”
+- On success, proceed to collect additional document-related validations.
+
+---
+
+### 3. Reference ID Validation
+- Each request must include a reference ID.
+- If missing, throw error: “Reference ID is required.”
+- All requests and responses are logged in API logs for traceability.
+- Logs capture: reference ID, request body, and response.
+
+---
+
+### 4. Consideration Amount vs. Stamp Duty Validation
+#### 4.1 Configuration
+- Validation is controlled by organization-level configuration:
+- If enabled → enforce rules.
+- If disabled → client can pass any values.
+#### 4.2 Rules
+- General Rule:
+- The consideration amount must always be greater than the stamp duty amount.
+- Multi-Request Handling:
+- If multiple stamp amounts are passed in an array for the same document:
+- Pick the maximum stamp duty amount from the array.
+- Compare it against the consideration amount.
+- If consideration ≤ max stamp duty → throw error.
+- Single Request Handling:
+- Compare the single stamp duty amount against the consideration amount.
+- If consideration ≤ stamp duty → throw error.
+#### 4.3 Special Condition
+- If stamp duty > ₹3,000 and consideration amount = 0 → throw error:
+“Consideration amount cannot be zero if stamp duty exceeds ₹3,000.”
+- If stamp duty < ₹3,000 and consideration ≤ stamp duty → throw error.
+
+---
+
+### 5. Error Handling
+- Errors are logged in API logs with reference ID and request details.
+- Error codes/messages are not yet standardized; documentation effort is ongoing to unify them.
+
+---
+
+### 6. Decision Points from Meeting
+- First-party validation is internal (no external API call).
+- Reference ID is mandatory and logged.
+- Consideration vs. stamp duty validation depends on configuration.
+- Multi-request arrays require max stamp duty comparison.
+- Special condition: consideration cannot be zero if stamp duty > ₹3,000.
+- Error codes/messages need standardization across documentation and code.
+
+---
+
+### 7. Action Items
+- Standardize error codes/messages for consistency.
+- Document multi-request handling clearly in the API reference.
+- Ensure the configuration flag for consideration checks is properly documented.
+- Add test cases for the ₹3,000 threshold condition.
+
+
+---
+
 ## Stamp Duty Validation & Auto-Calculation
 
 ### 1. Overview
