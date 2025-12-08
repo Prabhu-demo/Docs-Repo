@@ -1,0 +1,140 @@
+# API Documentation
+
+**Prepared By:**  
+Tanu Nanda Prabhu  
+
+---
+
+## Revision History
+
+| Version No. | Revision Date | Page No | Description | Author | Approver |
+|-------------|---------------|---------|-------------|--------|----------|
+|             |               |         |             |        |          |
+
+---
+
+## Table of Contents
+1. [Revision History](#revision-history)  
+2. [Table of Contents](#table-of-contents)  
+3. [Introduction](#introduction)  
+   - [About Desk Nine Pvt. Ltd.](#about-desk-nine-pvt-ltd)  
+   - [Melento](#melento)  
+4. [Name](#name)  
+5. [API Name](#api-name)  
+6. [Request Parameters](#request-parameters)  
+7. [Response Parameters](#response-parameters)  
+8. [Error Codes and Messages](#error-codes-and-messages)  
+
+---
+
+## Introduction
+
+### About Desk Nine Pvt. Ltd.
+Desk Nine Pvt. Ltd. is an ISO 27001:2013 and 9001:2015 certified technology company providing seamless & AI-powered digital documentation solutions.  
+To comprehensively address the challenges posed by the traditional documentation process, **Melento** (formerly SignDesk) was established under the guidance of Desk Nine Pvt. Ltd. to automate document workflows & boost productivity.  
+Melento offers solutions for contract automation, electronic evidence creation, digital ID verification & onboarding, and automated recurring payments.  
+
+### Melento
+Melento (formerly SignDesk), a product of Desk Nine Pvt. Ltd., is a global RegTech solution that offers document automation and workflow management to help businesses digitize, streamline, and scale their operations.  
+
+With over a decade of experience and multiple global awards, including *Best RegTech of the Year* at the BW FinTech Festival 2025, Melento powers digital transformation for over 3000 clients, including 60+ major banks, through AI-driven, compliance-ready workflow solutions.  
+
+**Solutions include:**
+- Digital onboarding using low-code APIs for digital and video-based onboarding  
+- Digital stamping (India-only) for real-time stamp duty payment and centralized procurement  
+- E-signatures for creation, tracking, and execution of online documents  
+- Contract Lifecycle Management (CLM) system for end-to-end contract digitization  
+- eNACH/eMandate automation for recurring payment management  
+- Collaborative intelligence platform with AI-powered workflows, real-time collaboration, and role-based approval paths  
+
+**Headquarters:** Bangalore, with offices across six Indian cities  
+**Team Size:** 300+ technology professionals  
+**Focus:** Trusted, paper-free solutions for documentation, workflow automation, and compliance  
+
+---
+
+## Name
+
+- **API Name**  
+- **Feature**  
+
+---
+
+## API Name
+
+- **HTTP Type**  
+- **Header**  
+- **Request**  
+
+```json
+1. (Raw request)
+{ 
+"reference_id": "xxxxx", 
+"source":
+ [ 
+"Base64 string"
+] 
+      "mask_qr_code": "xxxxx"          //true or false
+} 
+
+
+2. (Form Data Request)
+
+"reference_id": "xxxxx"
+    "source1" : "image_document"
+    "source2" :  "image_document"
+
+```
+
+- **Response**  
+- **Content-Type**  
+
+---
+
+## Request Parameters
+
+| Sl.No | Parameter | Field Option | Description |
+| ----- | :---- | :---- | :---- |
+| 1 | reference\_id | Mandatory | This is a unique ID sent in response to an API request. |
+| 2 | source | Mandatory | It is used when the raw data request is used and the base64 string is passed in it. |
+| 3 | mask\_qr\_code | Optional | This is the Boolean value that indicates whether the QR code on the Aadhaar card should be masked in the response. |
+| 4 | source1 | Mandatory | This field is utilized when making a form data request. |
+| 5 | source2 | Optional | This field is utilized when making a form data request. |
+
+---
+
+## Response Parameters
+
+| Sl. No | Parameter | Description |
+| ----- | :---- | :---- |
+| 1 | status | It represents whether the API is working or not, i.e., the success or failed scenario of the API.  |
+| 2 | message | This is the main content or text that is being sent or received. |
+| 3 | reference\_id | This is a unique ID sent in response to an API request. |
+| 4 | transaction\_id | This defines the transaction ID passed as part of the request. |
+| 5 | response\_time\_stamp | This represents the response time of the stamp. |
+| 6 | result | This represents the result of the API. |
+| 7 | image | It represents the image output field. |
+| 8 | first\_image | This is the first image output field when two images are passed. |
+| 9 | second\_image | This is the second image output field when two images are passed. |
+
+---
+
+## Error Codes and Messages
+
+| Error Code | Error Message |
+| :---: | ----- |
+| **dv-005** | Unknown error |
+| **dv-006** | The required source was not found in the request |
+| **dv-007** | The document verification services are not configured for this organization |
+| **dv-008** | The document verification APIs are not configured for this organization |
+| **dv-009** | The reference\_id used in the request should be unique |
+| **dv-010** | The required x-parse-application-id and x-parse-rest-api-key not found |
+| **dv-011** | The required x-parse-application-id was not found |
+| **dv-012** | The required x-parse-rest-api-key was not found |
+| **dv-013** | The passed x-parse-application-id and x-parse-rest-api-key do not match |
+| **dv-014** | The reference\_id passed in the request is invalid |
+| **dv-015** | The required reference\_id was not found in the request |
+| **dv-034** | The documents could not be processed |
+| **dv-060** | The API hit limit is exhausted for the client. Please replenish the hit limit. |
+| **dv-070** | The encryption certificate does not exist |
+| **dv-002** | The base64 content passed in the request is invalid |

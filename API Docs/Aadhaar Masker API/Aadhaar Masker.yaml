@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: QR Code Masking API
+  version: 1.0.0
+  description: API for masking QR codes in images
+
+paths:
+  /mask:
+    post:
+      summary: Mask QR code in images
+      description: Accepts either raw JSON or form-data requests to mask QR codes.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - type: object
+                  properties:
+                    reference_id:
+                      type: string
+                    source:
+                      type: array
+                      items:
+                        type: string
+                        description: Base64-encoded image string
+                    mask_qr_code:
+                      type: string
+                      enum: ["true", "false"]
+                - type: object
+                  properties:
+                    reference_id:
+                      type: string
+                    source1:
+                      type: string
+                      description: Image document
+                    source2:
+                      type: string
+                      description: Image document
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                reference_id:
+                  type: string
+                source1:
+                  type: string
+                  format: binary
+                source2:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successful masking response
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                      message:
+                        type: string
+                        example: Data masked successfully
+                      reference_id:
+                        type: string
+                      transaction_id:
+                        type: string
+                      response_time_stamp:
+                        type: string
+                      result:
+                        type: object
+                        properties:
+                          image:
+                            type: string
+                            description: Masked image (single)
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                      message:
+                        type: string
+                        example: Data masked successfully
+                      reference_id:
+                        type: string
+                      transaction_id:
+                        type: string
+                      response_time_stamp:
+                        type: string
+                      result:
+                        type: object
+                        properties:
+                          first_image:
+                            type: string
+                            description: First masked image
+                          second_image:
+                            type: string
+                            description: Second masked image
