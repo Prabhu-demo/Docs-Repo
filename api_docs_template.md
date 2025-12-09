@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="style.css">
 
-![alt text](image.png)
+<p align="center">
+  <img src="Img/img4.jpg" alt="Blue table" style="width:50%; height:auto;" />
+</p>
 
 # API Documentation
 
@@ -9,6 +11,7 @@ Tanu Nanda Prabhu
 
 ---
 
+![alt text](Img\blue_section_png.png)
 
 
 ## Table of Contents
@@ -23,46 +26,6 @@ Tanu Nanda Prabhu
 7. [Response Parameters](#response-parameters)  
 8. [Error Codes and Messages](#error-codes-and-messages)  
 
----
-
-## Introduction
-
-<!-- Blue Section Start -->
-
-<link rel="stylesheet" href="styles.css">
-
-<div class = "blue-box">
-<h1>About Desk Nine Pvt. Ltd.</h1>
-<p>
-Desk Nine Pvt. Ltd. is an ISO 27001:2013 and 9001:2015 certified technology company providing seamless & AI-powered digital documentation solutions. To comprehensively address the challenges posed by the traditional documentation process, <strong>Melento (formerly SignDesk)</strong> was established under the guidance of Desk Nine Pvt. Ltd, to automate document workflows & boost productivity. Melento offers solutions for contract automation, electronic evidence creation, digital ID verification & onboarding, and automated recurring payments.
-</p>
-
-<hr>
-
-<h2>Melento</h2>
-<p>
-Melento (formerly SignDesk), a product of Desk Nine Pvt. Ltd., is a global RegTech offering document automation and workflow management to help businesses digitize, streamline, and scale their operations. With over a decade of experience and multiple international awards, including <em>Best RegTech of the Year</em> at the BW FinTech Festival 2025, Melento powers digital transformation for 3000+ clients, including 60+ major banks, through AI-driven, compliance-ready workflow solutions.
-</p>
-
-<hr>
-
-<h3>Our Solutions</h3>
-<ul>
-  <li><strong>Digital Onboarding</strong> using low-code APIs for digital and video-based onboarding</li>
-  <li><strong>Digital Stamping (India-only)</strong> for real-time payment of stamp duty and centralized procurement</li>
-  <li><strong>E-signatures</strong> to create, track, and execute online documents</li>
-  <li><strong>Contract Lifecycle Management (CLM)</strong> digitizing the end-to-end contract process</li>
-  <li><strong>eNACH/eMandate Automation</strong> for recurring payment management</li>
-  <li><strong>Collaborative Intelligence Platform</strong> with AI-powered workflows, real-time multi-party collaboration, and role-based approvals</li>
-</ul>
-
-<hr>
-
-<h3>Headquarters</h3>
-<p>
-Headquartered in <strong>Bangalore</strong> with offices across six Indian cities, a global presence, and a team of 300+ technology professionals, Melento delivers trusted, paper-free solutions for documentation, end-to-end operational workflow, and contract lifecycle management, while enhancing compliance and accelerating business outcomes.
-</p>
-</div>
 
 ---
 
