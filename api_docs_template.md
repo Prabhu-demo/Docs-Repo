@@ -11,7 +11,7 @@ Tanu Nanda Prabhu
 
 ---
 
-![alt text](Img\blue_section_png.png)
+<img src="Img\blue_section.png">
 
 
 ## Table of Contents
