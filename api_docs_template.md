@@ -2,17 +2,35 @@
 
 <p align="center">
   <img src="Img/img4.jpg" alt="Blue table" style="width:50%; height:auto;" />
+
+</p>
+<br>
+<br>
+<h1 align = "center"> API Documentation </h1>
+<br>
+<br>
+
+
+<p align = "right">
+<b>Prepared By:</b>
+Tanu Nanda Prabhu  
 </p>
 
-# API Documentation
+<img src="Img\bar.jpg">
 
-**Prepared By:**  
-Tanu Nanda Prabhu  
-
----
+# Introduction
 
 <img src="Img\blue_section.png">
 
+<p align="right">
+
+<img src="Img\footer.jpg">
+</p>
+
+
+
+
+<img src="Img\bar.jpg">
 
 ## Table of Contents
 1. [Revision History](#revision-history)  
@@ -27,8 +45,9 @@ Tanu Nanda Prabhu
 8. [Error Codes and Messages](#error-codes-and-messages)  
 
 
----
-
+<br>
+<br>
+<img src="Img\bar.jpg">
 
 ## API Name
 
@@ -57,7 +76,9 @@ Tanu Nanda Prabhu
 
 
 
-
+<br>
+<br>
+<img src="Img\bar.jpg">
 
 ## Request Parameters
 
@@ -69,7 +90,9 @@ Tanu Nanda Prabhu
 | 4 | source1 | Mandatory | This field is utilized when making a form data request. |
 | 5 | source2 | Optional | This field is utilized when making a form data request. |
 
----
+<br>
+<br>
+<img src="Img\bar.jpg">
 
 ## Response Parameters
 
@@ -85,7 +108,9 @@ Tanu Nanda Prabhu
 | 8 | first\_image | This is the first image output field when two images are passed. |
 | 9 | second\_image | This is the second image output field when two images are passed. |
 
----
+<br>
+<br>
+<img src="Img\bar.jpg">
 
 ## Error Codes and Messages
 
