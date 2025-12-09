@@ -4,21 +4,12 @@
   <img src="Img/img4.jpg" alt="Blue table" style="width:50%; height:auto;" />
 
 </p>
-<br>
-<br>
-<h1 align = "center"> API Documentation </h1>
-<br>
-<br>
 
+<h1 align = "center"> API Documentation </h1>
 
 <p align = "right">
-<b>Prepared By:</b>
-Tanu Nanda Prabhu  
+<b>Prepared By: Tanu Nanda Prabhu  </b>
 </p>
-
-<img src="Img\bar.jpg">
-
-# Introduction
 
 <img src="Img\blue_section.png">
 
