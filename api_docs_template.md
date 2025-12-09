@@ -1,5 +1,16 @@
 <link rel="stylesheet" href="style.css">
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p align="center">
   <img src="Img/img4.jpg" alt="Blue table" style="width:50%; height:auto;" />
 
@@ -7,23 +18,49 @@
 
 <h1 align = "center"> API Documentation </h1>
 
-<p align = "right">
-<b>Prepared By: Tanu Nanda Prabhu  </b>
-</p>
 
-<img src="Img\blue_section.png">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 <p align="right">
 
-<img src="Img\footer.jpg">
+<img src="Img\footer_with_cred.jpg">
 </p>
 
+<br>
+<br>
 
 
 
-<img src="Img\bar.jpg">
+# **Introduction**
 
-## Table of Contents
+<img src="Img\blue_section.png">
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+## **Table of Contents**
 1. [Revision History](#revision-history)  
 2. [Table of Contents](#table-of-contents)  
 3. [Introduction](#introduction)  
@@ -36,11 +73,10 @@
 8. [Error Codes and Messages](#error-codes-and-messages)  
 
 
-<br>
-<br>
-<img src="Img\bar.jpg">
 
-## API Name
+<br>
+
+## **API Name**
 
 - **HTTP Type**: `POST`  
 - **Header**:  
@@ -67,11 +103,10 @@
 
 
 
-<br>
-<br>
-<img src="Img\bar.jpg">
 
-## Request Parameters
+<br>
+
+## **Request Parameters**
 
 | Sl.No | Parameter | Field Option | Description |
 | ----- | :---- | :---- | :---- |
@@ -81,11 +116,10 @@
 | 4 | source1 | Mandatory | This field is utilized when making a form data request. |
 | 5 | source2 | Optional | This field is utilized when making a form data request. |
 
-<br>
-<br>
-<img src="Img\bar.jpg">
 
-## Response Parameters
+<br>
+
+## **Response Parameters**
 
 | Sl. No | Parameter | Description |
 | ----- | :---- | :---- |
@@ -99,11 +133,10 @@
 | 8 | first\_image | This is the first image output field when two images are passed. |
 | 9 | second\_image | This is the second image output field when two images are passed. |
 
-<br>
-<br>
-<img src="Img\bar.jpg">
 
-## Error Codes and Messages
+<br>
+
+## **Error Codes and Messages**
 
 | Error Code | Error Message |
 | :---: | ----- |
