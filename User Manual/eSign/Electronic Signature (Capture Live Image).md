@@ -1,54 +1,81 @@
-#  
+<link rel="stylesheet" href="style.css">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-![][image1]
+<p align="center">
+  <img src="Img\melento.png" alt="Blue table" style="width:50%; height:auto;" />
+</p>
 
-# 
+<h1 align = "center"> Electronic Signature (Capture Live Image) </h1>
+<h2 align = "center">User Manual </h2>
 
-# 
 
-#  **Electronic Signature (Capture Live Image)**
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-   User Manual
 
-## Prepared By:
+<p align="right">
 
-[Veena G](mailto:veena.g@signdesk.com)  
-Apr 29, 2025
+<img src="Img\footer_with_cred.jpg">
+</p>
 
-# **Revision History** {#revision-history}
+<br>
+<br>
 
-| Revision No | Revision Date | Page No | Description | Author | Approver |
-| :---: | :---: | :---: | :---: | :---: | ----- |
-| \- |  |  | Document Created | [Veena G](mailto:veena.g@signdesk.com) |  |
-|  |  |  |  |  |  |
-|  |  |  |  |  |  |
 
-Table of Contents
+
+# **Introduction**
+
+<img src="Img\blue_section.png">
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+## **Table of Contents**
 
 [**Revision History	1**](#revision-history)
 
 [**Introduction	3**](#introduction)
-
-[About Desk Nine Pvt Ltd	3](#about-desk-nine-pvt-ltd)
-
-[SignDesk	3](#signdesk)
-
 [**Scope of the document	3**](#scope-of-the-document)
-
 [**Initiator Journey	4**](#initiator-journey)
-
 [**Signer Journey	12**](#signer-journey)
 
-# **Introduction** {#introduction}
 
-| About Desk Nine Pvt Ltd Desk Nine Pvt. Ltd. is an ISO 27001:2013 and 9001:2015 certified technology company providing seamless & AI-powered digital documentation solutions. To comprehensively solve the challenges caused due to the traditional documentation process, SignDesk was created under the aegis of Desk Nine Pvt. Ltd, to automate document workflows & boost productivity. SignDesk offers solutions for contract automation, electronic evidence creation, digital ID verification & onboarding, and automated recurring payments.  SignDesk SignDesk is a global provider of document automation solutions developed to maximize productivity, improve workflow efficiency, and help businesses achieve digital transformation goals. Our product suite offers AI-powered solutions for digital onboarding, ID verification, digital evidence creation, contract management, and recurring payment automation, customizable for businesses & verticals across industry sectors.   SignDesk’s intelligent documentation module consists of five product pillars: KYC/KYB Verification for businesses to maintain AML/CDD compliance & create seamless video-based onboarding journeys with low code APIs, Digital Stamping enabling businesses to pay stamp duty in real-time & streamline stamp procurement across the nation, E-Signature Workflow solution to create, track & eSign documents online at scale with a robust audit trail, Contract Lifecycle Management to digitize contract stages from draft to renewal and enable holistic contract governance; and eNACH eMandate solutions to automate recurring payments using Aadhaar, APIs or QR-codes.  |
-| :---- |
 
-# **Scope of the document** {#scope-of-the-document}
+# **Scope of the document** 
 
 This user manual offers comprehensive guidance for initiating and completing workflows within the SignDesk portal. It outlines the process of selecting an electronic signature and incorporating digital stamping. Additionally, it provides detailed instructions to capture the user's live image. 
 
-# **Initiator Journey** {#initiator-journey}
+# **Initiator Journey** 
 
 **Step 1:** Log in to the SignDesk application using your provided credentials.  
 ![][image2]  
@@ -105,7 +132,7 @@ You can add multiple signers by clicking on the **\+Add Stakeholders** button if
 **Step 12:** The stamp paper will be attached and a pop-up appears, depicting that the signer has been notified successfully.  
 ![][image16]
 
-# **Signer Journey** {#signer-journey}
+# **Signer Journey**
 
 **Step 1:**  An email with an invitation to sign the document is sent to your respective email addresses. Click on the **Sign Document** button to proceed.  
 **![][image17]**
@@ -144,10 +171,10 @@ After choosing the signature for the document, click on the **Proceed** button.
 **Step 9:** The OTP is sent to the email or mobile number selected by the initiator. Enter the received OTP in the provided field and click the **Sign now** button to proceed with the signing.  
 **![][image25]**
 
-**Step 10: ** A pop-up appears upon completion of the signing process. Click on the **Okay** button.  
+**Step 10:** A pop-up appears upon completion of the signing process. Click on the **Okay** button.  
 **![][image26]**
 
-**Step 11: ** Upon the signature is affixed to the document. You can download the completed document by clicking on the **Download** button.  
+**Step 11:** Upon the signature is affixed to the document. You can download the completed document by clicking on the **Download** button.  
 **![][image27]**
 
 The completed document and the audit document are sent to your email address.  
