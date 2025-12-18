@@ -33,7 +33,7 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 
 ### 4. Auto-Calculation Logic
 #### 4.1 Enabled States
-- Karnataka: Auto-calculation applies to all article codes.
+- Karnataka: Auto-calculation applies to all article codes
 - Gujarat & Rajasthan: Auto-calculation applies only to specific configured article codes.
 #### 4.2 Calculation Modes
 - Shield Auto-Calculation
