@@ -16,7 +16,9 @@
 
 </p>
 
-<h1 align = "center"> API Documentation </h1>
+<h1 align = "center"> Request API </h1>
+
+<h2 align = "center"> API Documentation </h2>
 
 
 <br>
@@ -47,8 +49,13 @@
 
 # **Introduction**
 
-<img src="Img\blue_section.png">
+## **Melento**
 
+<p align = "justify">Melento is a collaborative intelligence platform that transforms siloed data and systems into autonomous workflows that streamline processes and accelerate decision-making.</p>
+
+<p align = "justify">It provides an intuitive drag-and-drop builder so teams can quickly design and automate complex workflows across various departments and support with no need for traditional coding skills while orchestrating rules, approvals, and system integrations end-to-end.</p>
+
+<p align = "justify">Teams collaborate in a unified workspace with shared tasks, documents, comments, and audit trails, providing full visibility into progress and accountability.</p>
 
 <br>
 <br>
