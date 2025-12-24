@@ -33,8 +33,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 
 
 <p align="right">
@@ -42,8 +40,6 @@
 <img src="Img\footer_with_cred.jpg">
 </p>
 
-<br>
-<br>
 
 
 
@@ -64,10 +60,35 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-
-## **Table of Contents**
+# **Table of Contents**
 1. [Revision History](#revision-history)  
 2. [Table of Contents](#table-of-contents)  
 3. [Introduction](#introduction)  
@@ -83,7 +104,7 @@
 
 <br>
 
-## **API Name**
+# **API Name**
 
 - **HTTP Type**: `POST`  
 - **Header**:  
