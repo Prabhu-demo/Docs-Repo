@@ -19,7 +19,7 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 ### 3. Validation Rules
 #### 3.1 Article-Based Validation
 - Each article code + article name pair has defined stamp duty ranges.
-- Example: Article Code 14 (“Born”) → Stamp amount range: ₹0 – ₹5,00,000.
+- Example: Article Code 14 (“Born”) → Stamp amount range: ₹0 - ₹5,00,000.
 - Some article codes enforce only a minimum value, with no maximum cap.
 #### 3.2 Loan-Based Validation
 - For certain article codes, stamp duty is calculated as a percentage of the loan amount.
@@ -36,8 +36,8 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 - Karnataka: Auto-calculation applies to all article codes
 - Gujarat & Rajasthan: Auto-calculation applies only to specific configured article codes.
 #### 4.2 Calculation Modes
-- Shield Auto-Calculation
-- Uses external API (Shield).
+- SHCIL Auto-Calculation
+- Uses external API (SHCIL).
 - Exclusive with Sign Auto-Calculation (cannot enable both).
 - Failure → throw Unknown Exception.
 - Success → return calculated stamp amount in API response.
@@ -105,7 +105,7 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 ---
 
 ### 8. Additional Features
-#### 8.1 Search Charge Calculation
+#### 8.1 Surcharge Calculation
 - Currently enabled only for Rajasthan.
 - Configurable at core level → can be extended to other states.
 - If enabled, calculations proceed accordingly for configured states.
@@ -118,7 +118,7 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 - Autofill configuration determines whether first-party details are auto-populated or client-supplied.
 - Second-party info can be optional depending on organization configuration.
 - “NA” value for second party name bypasses validation.
-- Search charge calculation is configurable but currently limited to Rajasthan.
+- Surcharge calculation is configurable but currently limited to Rajasthan.
 
 ---
 
@@ -127,7 +127,7 @@ Stamp duty validation and auto-calculation are currently implemented for five st
 - Maintain dual request format support (standard vs. KVB).
 - Ensure autofill logic integrates with organization onboarding data.
 - Validate first and second party details consistently across autofill/manual entry modes.
-- Confirm search charge calculation extension for other states.
+- Confirm Surcharge calculation extension for other states.
 
 
 ----
@@ -253,7 +253,7 @@ Client-specific override allows second party name as "NA".
 
 ---
 
-## 11. Search Charge Calculation
+## 11. Surcharge Calculation
 - Currently enabled only for Rajasthan  
 - Configuration-driven for future expansion  
 
@@ -272,10 +272,10 @@ Client-specific override allows second party name as "NA".
 
 ---
 
-# KVB-Specific Validations, Search Charge & Payment Mode Logic
+# KVB-Specific Validations, Surcharge & Payment Mode Logic
 
 ## 1. Overview
-This document captures **KVB-specific validations**, **search charge calculation logic**, and **payment mode & dynamic party swapping behavior** derived from the technical walkthrough.  
+This document captures **KVB-specific validations**, **Surcharge calculation logic**, and **payment mode & dynamic party swapping behavior** derived from the technical walkthrough.  
 These rules are layered on top of the standard stamping workflow and apply only when corresponding organization-level configurations are enabled.
 
 ---
@@ -290,23 +290,23 @@ These rules are layered on top of the standard stamping workflow and apply only 
 
 ---
 
-## 3. Search Charge Calculation
+## 3. Surcharge Calculation
 
 ### 3.1 Applicability
-- Search charge is **state-configurable**
+- Surcharge is **state-configurable**
 - Currently **enabled only for Rajasthan**
 - Mandatory when enabled for a state
 
 ---
 
 ### 3.2 Configuration Structure
-- Search charge is defined as an **array of percentages**
+- Surcharge is defined as an **array of percentages**
 - Example: `[10, 10, 10]` → Total 30%
 
 ---
 
 ### 3.3 Calculation Logic
-Search charge is **not calculated as a single aggregated percentage**.
+Surcharge is **not calculated as a single aggregated percentage**.
 
 Instead:
 1. Each percentage is calculated **individually**
@@ -318,15 +318,15 @@ Stamp Amount: `115`
 Percentages: `[10, 10, 10]`
 
 - 10% of 115 = 11.5 → rounded to 12
-- Total Search Charge = `12 + 12 + 12 = 36`
+- Total Surcharge = `12 + 12 + 12 = 36`
 
 This avoids rounding discrepancies that occur with direct percentage aggregation.
 
 ---
 
 ### 3.4 Validation
-- If calculated search charge does not match request value:
-  - Error: **Search charge used in the request is invalid**
+- If calculated surcharge does not match request value:
+  - Error: **Surcharge used in the request is invalid**
 - Same logic applies to:
   - Single request
   - Multi-request (array-based stamping)
@@ -334,14 +334,14 @@ This avoids rounding discrepancies that occur with direct percentage aggregation
 ---
 
 ### 3.5 Mandatory Field Validation
-- If search charge is enabled for the state and not passed:
-  - Error: **Search charge is a mandatory field**
+- If surcharge is enabled for the state and not passed:
+  - Error: **Surcharge is a mandatory field**
 
 ---
 
 ## 4. Multi-Request Handling
 For multi-stamp requests:
-- Search charge must be an array
+- Surcharge must be an array
 - Each element must correspond to its stamp amount
 - Any mismatch causes validation failure
 
