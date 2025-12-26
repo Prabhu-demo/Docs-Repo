@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: Resend Invitation API
+  version: 1.0.0
+  description: This API is used to resend the signing invitation when the initial invitation was not sent.
+
+paths:
+  /resend-invitation:
+    post:
+      summary: Resend the signing invitation
+      description: Resends the signing invitation when the initial invitation was not sent.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - document_id
+                - docket_id
+                - stakeholder_id
+                - reference_id
+                - attempt_count
+              properties:
+                document_id:
+                  type: string
+                  description: Unique ID assigned to each uploaded document.
+                docket_id:
+                  type: string
+                  description: Unique ID for the set of uploaded document(s).
+                stakeholder_id:
+                  type: string
+                  description: Unique ID assigned to every stakeholder.
+                reference_id:
+                  type: string
+                  description: Unique ID assigned to every eSign requester for each API call.
+                attempt_count:
+                  type: string
+                  description: Number of resend attempts.
+      responses:
+        '200':
+          description: Success response with invitation link
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error_code:
+                    type: string
+                  message:
+                    type: string
+                  reference_id:
+                    type: string
+                  resendInvitationLink:
+                    type: string
+                    description: Invitation link sent to signers who did not receive the initial invitation.
+        '400':
+          description: Failure response without invitation link
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error_code:
+                    type: string
+                  message:
+                    type: string
+                  reference_id:
+                    type: string
+
+      parameters:
+        - in: header
+          name: x-parse-rest-api-key
+          required: true
+          schema:
+            type: string
+          description: Required API key
+        - in: header
+          name: x-parse-application-id
+          required: true
+          schema:
+            type: string
+          description: Application identifier
